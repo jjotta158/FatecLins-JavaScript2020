@@ -1,9 +1,9 @@
+var num1 = document.getElementById( 'num1' );
+var num2 = document.getElementById( 'num2' );
+var erro = document.getElementById( 'msg-error' );
+num1 = parseFloat( num1.value );
+num2 = parseFloat( num2.value );
 function validar( operacao ) {
-    var num1 = document.getElementById( 'num1' );
-    var num2 = document.getElementById( 'num2' );
-    var erro = document.getElementById( 'msg-error' );
-    num1 = parseFloat( num1.value );
-    num2 = parseFloat( num2.value );
     if ( num1 == "" || num2 == "" ) {
         erro.innerHTML = 'Preencha Corretamente os Campos';
         return false;
@@ -18,8 +18,7 @@ function validar( operacao ) {
 function somar() {
     var resultado = document.getElementById( 'lbl-result' );
     var valid = validar( "somar" );
-    num1 = parseFloat( num1.value );
-    num2 = parseFloat( num2.value );
+
     if ( valid ) {
         return resultado.innerHTML = parseFloat( num1 + num2 );
     } else {
@@ -30,8 +29,7 @@ function somar() {
 function subtrair() {
     var resultado = document.getElementById( 'lbl-result' );
     var valid = validar( "subtrair" );
-    num1 = parseFloat( num1.value );
-    num2 = parseFloat( num2.value );
+
     if ( valid ) {
         return resultado.innerHTML = parseFloat( num1 - num2 );
     } else {
@@ -42,8 +40,7 @@ function subtrair() {
 function multiplicar() {
     var resultado = document.getElementById( 'lbl-result' );
     var valid = validar( "multiplicar" );
-    num1 = parseFloat( num1.value );
-    num2 = parseFloat( num2.value );
+
     if ( valid ) {
         return resultado.innerHTML = parseFloat( num1 * num2 );
     } else {
@@ -53,11 +50,11 @@ function multiplicar() {
 function dividir() {
     var resultado = document.getElementById( 'lbl-result' );
     var valid = validar( "divisão" );
-    num1 = parseFloat( num1.value );
-    num2 = parseFloat( num2.value );
+    
     if ( valid ) {
         return resultado.innerHTML = parseFloat( num1 / num2 );
     } else {
         return false;
     }
 }
+
