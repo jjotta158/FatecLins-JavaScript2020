@@ -4,35 +4,41 @@
         <meta charset="utf-8">
         <title>Calculadora</title>
         <link rel="stylesheet" href="css/style.css">
-        <script src="js/calcula.js" charset="utf-8"></script>
+        <script  src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Kanit&display=swap" rel="stylesheet">
     </head>
     <body>
-        <main>
+        <main id="app">
             <section>
                 <div class="inputArea">
-                    <input type="text" id="inputArea">
+                    <div id="inputLabel">
+                        <p id="label">{{label}}</p>
+                        <button @click="deleteLastLabelCharacter" id="delete">-</button>
+                    </div>
+                    <button @click="reset">C</button>
                 </div>
                 <br>
                 <div class="buttonsArea">
                     <div class="numberButtonsArea">
-                        <ul class="numberButtonsList">                            
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                            <li>7</li>
-                            <li>8</li>
-                            <li>9</li>
-                            <li style="width:16.3vmin;">0</li>
-                        </ul>
+                        <div class="numberButtonsList">                            
+                            <button value="{{button.num}}" @click="fillLabel(button.num)" v-for="button in buttons">{{button.num}}</button>
+                            
+                            <button value="0" @click="fillLabel(0)" style="width:16.3vmin;">0</button>
+                            <button value="." @click="fillLabel('.')" style="width:3vmin;">.</button>
+                        </div>
                     </div>
                     <div class="operationsButtonsArea">
-
+                        <button @click="div">/</button>
+                        <button @click="mult">*</button>
+                        <button @click="sub">-</button>
+                        <button @click="sum">+</button>
+                        <button @click="resp">=</button>
                     </div>
                 </div>
             </section>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+        <script src="js/calcula.js" charset="utf-8"></script>
+        <script src="js/func.js" charset="utf-8"></script>
     </body>
 </html>

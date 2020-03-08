@@ -27,12 +27,64 @@ h1{
     color: white;
     text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-input{
+.inputArea{
+    display: flex;
+    justify-content: flex-start;
+    
     width: 100%;
-    height:4vmin;
+}
+#inputLabel{
+    width: 70%;
+    height:5vmin;
     border-radius: 1vmin;
     border:0.5vmin solid white;
     text-align: center;
+    color:#A875FF;
+    background-color: white;
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#inputLabel p{
+    padding-left:1vmin;
+}
+.inputArea button{
+    padding: 1vmin;
+    padding-right: 3vmin;
+    padding-left: 3vmin;
+    border-radius: 1vmin;
+    border:0.5vmin solid white;
+    text-align: center;
+    color:#A875FF;
+    background-color: white;
+    font-family: 'Fredoka One', cursive;
+    margin-left: 1.5vmin;
+    
+}
+#inputLabel #delete{
+    background-color: transparent;
+    border:0px;
+    padding:3px;
+    padding-right:1.5vmin;
+}
+.operationsButtonsArea{
+    display: flex;
+    flex-direction: column;
+    margin-left: -5vmin;
+}
+button{
+    padding: 2vmin;
+    padding-right: 3vmin;
+    padding-left: 3vmin;
+    background-color: white;
+    border-radius: 0.5vmin;
+    border: none;
+    margin-bottom: 0.5vmin;
+    font-size: 2.3vmin;
+    color:#A875FF;
+    font-family: 'Fredoka One', cursive;
+    cursor:pointer;
 }
 .buttonsArea{
     display: flex;
@@ -44,11 +96,13 @@ input{
     display: flex;
     flex-wrap: wrap;
 }
-.numberButtonsList li {
+.numberButtonsList button {
     padding:3vmin;
     margin:0.3vmin;
     background-color: white;
     color:#A875FF;
     list-style: none;
     border-radius: 1vmin;
+    font-family: 'Fredoka One', cursive;
+    cursor:pointer;
 }
